@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dishcovery</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="resposive.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <a href="#" class="logo">
+        <img src="Dishcovery Chef Hat Recipe Logo.png" alt="Dishcovery">
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#generate">Generate</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#saved">Saved</a></li>
+    </ul>
+
+    <a href="#signin" class="signin">Sign In</a>
+
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
+
+</nav>
+
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            ✦ YOUR PERSONAL RECIPE COMPANION
+        </span>
+
+        <h1>
+            Discover Something
+            <span>Delicious.</span>
+        </h1>
+
+        <p>
+            From simple ingredients to extraordinary meals.
+            Tell us what's in your kitchen and let Dishcovery
+            inspire your next delicious creation.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="generate.html" class="primary-btn">
+                Generate Recipe
+                <span>→</span>
+            </a>
+
+            <a href="recipes.html" class="secondary-btn">
+                Explore Recipes
+            </a>
+
+        </div>
+
+        <div class="hero-note">
+            <span>✦</span>
+            Made for your cravings, created for your kitchen.
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="image-decoration"></div>
+
+        <img
+            src="Creamy Pasta on a Mustard Banner.png"
+            alt="Delicious freshly prepared food"
+        >
+
+        <div class="image-label">
+            <span>✦</span>
+            Made with love
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="how-section">
+
+    <h2>How it works</h2>
+
+    <div class="steps-container">
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Add ingredients</h3>
+            <p>List what you have in the fridge and pantry.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Set your taste</h3>
+            <p>Pick a diet and how much time you have.</p>
+        </div>
+
+        
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Cook and save</h3>
+            <p>Get a recipe and keep your favourites.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+        <div class="dishcovery-recipe-grid" id="recipeGrid">
+            <article class="dishcovery-recipe-card" data-recipe="shakshuka">
+                <button class="dishcovery-recipe-open" type="button" aria-label="View Shakshuka recipe" data-open-recipe="shakshuka">
+                    <div class="dishcovery-recipe-image">
+                        <img src="shakuna.jpg" alt="Shakshuka">
+                    </div>
+                    <div class="dishcovery-recipe-info">
+                        <h3>Shakshuka</h3>
+                        <p>20 min <span>·</span> Serves 2</p>
+                    </div>
+                </button>
+                <div class="dishcovery-card-actions">
+                    <button class="dishcovery-view-btn" type="button" data-open-recipe="shakshuka">View recipe</button>
+                    <button class="dishcovery-remove-btn" type="button" data-remove-recipe="shakshuka" aria-label="Remove Shakshuka">×</button>
+                </div>
+            </article>
+
+            <article class="dishcovery-recipe-card" data-recipe="lemon-herb-chicken">
+                <button class="dishcovery-recipe-open" type="button" aria-label="View Lemon Herb Chicken recipe" data-open-recipe="lemon-herb-chicken">
+                    <div class="dishcovery-recipe-image">
+                        <img src="lemon-herb-chiken.jpg" alt="Lemon Herb Chicken">
+                    </div>
+                    <div class="dishcovery-recipe-info">
+                        <h3>Lemon Herb Chicken</h3>
+                        <p>40 min <span>·</span> Serves 4</p>
+                    </div>
+                </button>
+                <div class="dishcovery-card-actions">
+                    <button class="dishcovery-view-btn" type="button" data-open-recipe="lemon-herb-chicken">View recipe</button>
+                    <button class="dishcovery-remove-btn" type="button" data-remove-recipe="lemon-herb-chicken" aria-label="Remove Lemon Herb Chicken">×</button>
+                </div>
+            </article>
+
+            <article class="dishcovery-recipe-card" data-recipe="mushroom-risotto">
+                <button class="dishcovery-recipe-open" type="button" aria-label="View Mushroom Risotto recipe" data-open-recipe="mushroom-risotto">
+                    <div class="dishcovery-recipe-image">
+                        <img src="mushroom risotto.jpg" alt="Mushroom Risotto">
+                    </div>
+                    <div class="dishcovery-recipe-info">
+                        <h3>Mushroom Risotto</h3>
+                        <p>35 min <span>·</span> Serves 3</p>
+                    </div>
+                </button>
+                <div class="dishcovery-card-actions">
+                    <button class="dishcovery-view-btn" type="button" data-open-recipe="mushroom-risotto">View recipe</button>
+                    <button class="dishcovery-remove-btn" type="button" data-remove-recipe="mushroom-risotto" aria-label="Remove Mushroom Risotto">×</button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<dialog class="dishcovery-recipe-dialog" id="recipeDialog" aria-labelledby="dialogRecipeTitle">
+    <div class="dishcovery-dialog-layout">
+        <div class="dishcovery-dialog-image">
+            <img src="images/shakshuka.jpg" alt="Shakshuka" id="dialogRecipeImage">
+        </div>
+
+        <div class="dishcovery-dialog-content">
+            <button class="dishcovery-dialog-close" type="button" id="closeRecipeDialog" aria-label="Close recipe">×</button>
+
+            <p class="dishcovery-dialog-label">DISHCOVERY RECIPE</p>
+            <h2 id="dialogRecipeTitle">Shakshuka</h2>
+            <p class="dishcovery-dialog-description">A delicious, comforting dish made with eggs, tomatoes and warm spices.</p>
+
+            <div class="dishcovery-recipe-stats">
+                <div>
+                    <span>PREP TIME</span>
+                    <p id="dialogPrepTime">10 min</p>
+                </div>
+                <div>
+                    <span>COOK TIME</span>
+                    <p id="dialogCookTime">20 min</p>
+                </div>
+                <div>
+                    <span>SERVINGS</span>
+                    <p id="dialogServings">2 people</p>
+                </div>
+            </div>
+
+            <section class="dishcovery-dialog-section">
+                <h3>Ingredients</h3>
+                <ul id="dialogIngredients">
+                    <li>2 eggs</li>
+                    <li>2 ripe tomatoes</li>
+                    <li>1 small onion</li>
+                    <li>1 tablespoon olive oil</li>
+                    <li>Salt and pepper</li>
+                    <li>1 teaspoon paprika</li>
+                </ul>
+            </section>
+            <section class="dishcovery-dialog-section">
+                <h3>How to make it</h3>
+                <ol id="dialogInstructions">
+                    <li>Heat olive oil in a pan and sauté the chopped onion.</li>
+                    <li>Add tomatoes and spices. Cook until the sauce thickens.</li>
+                    <li>Make small spaces in the sauce and add the eggs.</li>
+                    <li>Cover and cook until the eggs are done to your liking.</li>
+                </ol>
+            </section>
+            <button class="dishcovery-save-btn" type="button" id="saveRecipeBtn">♡ Save to favourites</button>
+        </div>
+    </div>
+</dialog>
+<section class="dishcovery-cta">
+    <div class="dishcovery-cta-content">
+        <div>
+            <h2>Ready to cook something new?</h2>
+            <p>Add your ingredients and get a recipe in seconds.</p>
+        </div>
+        <button class="dishcovery-cta-btn" type="button" id="openGeneratorBtn">
+            Generate a recipe
+        </button>
+    </div>
+</section>
+<dialog class="dishcovery-generator-dialog" id="generatorDialog" aria-labelledby="generatorTitle">
+    <div class="dishcovery-generator-content">
+        <button class="dishcovery-generator-close" type="button" id="closeGeneratorBtn" aria-label="Close generator">×</button>
+        <p class="dishcovery-generator-label">DISHCOVERY RECIPE GENERATOR</p>
+        <h2 id="generatorTitle">Let's make something delicious!</h2>
+        <p class="dishcovery-generator-description">Tell us what you have in your kitchen and we'll help you turn it into a delicious meal.</p>
+        <form class="dishcovery-generator-form" id="recipeGeneratorForm">
+            <div class="dishcovery-form-group">
+                <label for="ingredients">What's in your kitchen?</label>
+                <textarea id="ingredients" name="ingredients" placeholder="Enter your ingredients (e.g. eggs, tomatoes, onions, cheese...)" required></textarea>
+                <span class="dishcovery-field-hint">Separate your ingredients with commas.</span>
+            </div>
+            <div class="dishcovery-form-group">
+                <label for="diet">Any dietary requirements?</label>
+                <select id="diet" name="diet">
+                    <option value="none">No specific requirements</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten-free</option>
+                    <option value="dairy-free">Dairy-free</option>
+                </select>
+            </div>
+            <div class="dishcovery-form-group">
+                <label for="cookingTime">How much time do you have?</label>
+                <select id="cookingTime" name="cookingTime" required>
+                    <option value="" disabled selected>Select cooking time</option>
+                    <option value="15">15 minutes or less</option>
+                    <option value="30">Around 30 minutes</option>
+                    <option value="45">Around 45 minutes</option>
+                    <option value="60">Up to 1 hour</option>
+                </select>
+            </div>
+
+            <button class="dishcovery-generate-btn" type="button" id="generateRecipeBtn">
+                Generate my recipe <span>→</span>
+            </button>
+        </form>
+    </div>
+</dialog>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="dishcovery-footer">
+
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Dish<span>covery.</span>
+            </a>
+
+            <p>
+                Discover delicious recipes, explore new flavours
+                and turn everyday ingredients into something special.
+            </p>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Pinterest">P</a>
+                <a href="#" aria-label="YouTube">YT</a>
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all-recipes.html">All Recipes</a></li>
+                <li><a href="index.html#generator">Recipe Generator</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Categories -->
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+                <li><a href="all-recipes.html">Breakfast</a></li>
+                <li><a href="all-recipes.html">Lunch</a></li>
+                <li><a href="all-recipes.html">Dinner</a></li>
+                <li><a href="all-recipes.html">Desserts</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+
+            <h3>Stay Inspired!</h3>
+
+            <p>
+                Get delicious recipe ideas and cooking inspiration
+                delivered to your inbox.
+            </p>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe →
+                </button>
+
+            </form>
+
+            <p id="newsletterMessage" class="newsletter-message"
+               aria-live="polite"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="currentYear"></span> Dishcovery.
+            All rights reserved.
+        </p>
+
+        <p class="footer-tagline">
+            Made with love for food lovers.
+        </p>
+
+        <button id="backToTop" class="back-to-top">
+            ↑ Back to Top
+        </button>
+
+    </div>
+
+</footer>
+
+
+
+    
+
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
